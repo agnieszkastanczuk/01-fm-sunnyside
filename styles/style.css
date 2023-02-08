@@ -1,0 +1,413 @@
+:root{
+
+  --white: hsl(0, 0%, 100%);
+  --blue: hsl(200, 100%, 62%);
+  --grayissh-blue: hsl(210, 4%, 67%);
+  --red: hsl(7, 99%, 70%, 0.5);
+  --yellow: hsl(51, 100%, 49%, 0.5);
+  --dark-desaturated-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --light-moderate-cyan:  hsl(167, 44%, 70%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --black: black;
+
+  --font-headings: "Fraunces", serif; 
+  --font-body: "Barlow", serif;
+
+  --font-main-weight: 600;
+  --font-bold-weight: 700;
+  --font-bolder-weight: 900;
+}
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+
+/* general styles */
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,h2,h3{
+  font-family: var(--font-headings);
+}
+
+h2{
+  font-weight: var(--font-bold-weight);
+}
+
+h3{
+  text-transform: uppercase;
+  font-weight: var(--font-bold-weight);
+}
+
+p{
+  font-size: 1.1rem;
+  letter-spacing: -0.5px;
+  font-weight: var(--font-body);
+}
+
+
+section, footer {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+ul{
+  padding: 0;
+}
+
+
+li{
+  list-style: none;
+}
+ 
+a{
+  text-decoration: none;
+}
+
+
+
+/* navbar */
+nav{
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 1.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.nav-links{
+  display: none;
+}
+
+.nav-links.nav-active {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 87%;
+  top: 7rem;
+  background-color: var(--white);
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.nav-links li{
+  color: var(--white);
+  padding: 1.2rem;
+}
+
+.nav-links a{
+  color: var(--grayissh-blue);
+  font-size: 1.1rem;
+}
+ 
+.contact{
+  color: var(--black);
+  text-transform: uppercase;
+  padding: 1rem 1.4rem;
+  border-radius: 30px;
+  font-family: var(--font-headings);
+  background-color: var(--yellow);
+  font-size: 0.9rem;
+}
+
+
+/* welcome */
+.welcome-container{
+  display: flex;
+  position: relative;
+  display: flex;
+}
+
+.welcome-text{
+  position: absolute;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: var(--font-bolder-weight);
+  top: 24%;
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+.welcome-text img{
+  margin: auto;
+  padding-top: 2rem;
+}
+
+
+/* about and services */
+
+.about-container h2,
+.services-container h2{
+  font-size: 2rem;
+  font-weight: 800;
+  padding-top: 4rem;
+  padding-bottom: 1.8rem;
+  padding-inline: 2rem;
+}
+
+.about-container h3,
+.services-container h3{
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  padding-inline: 2rem;
+}
+
+.about-container p,
+.services-container p{
+  padding-inline: 2rem;
+  color: var(--grayissh-blue);
+}
+
+.text-underline-transform{
+  text-decoration: underline var(--yellow) 5px;
+}
+
+
+.text-underline-stand{
+  text-decoration: underline var(--red) 5px;
+}
+
+.services-container{
+  position: relative;
+}
+
+#text-photography,
+#text-graphic{
+  position: absolute;
+  top: 52%;
+}
+
+#text-graphic, #text-graphic p{
+  color: var(--dark-desaturated-cyan);
+}
+
+#text-photography, #text-photography p{
+  color: var(--dark-blue);
+}
+
+
+/* clients */
+
+#client-testimials{
+  margin-top: 4rem;
+  margin-bottom: 3.6rem;
+}
+
+.clients-heading{
+  letter-spacing: 4px;
+  color: var(--grayissh-blue);
+}
+
+#client-testimials p{
+  color: var(--grayissh-blue);
+}
+
+#client-testimials p{
+  padding-inline: 2.4rem;
+  padding-bottom: 1.4rem;
+}
+
+.client-image img{
+  border-radius: 50%;
+  margin: auto;
+  width: 4.8rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.client-name{
+  text-transform: capitalize;
+}
+
+.client-job{
+  font-size: 80%;
+  opacity: 80%;
+  padding-top: 0.4rem;
+}
+
+
+/* projects */
+
+#projects{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#projects picture{
+  width: 50%;
+}
+
+
+/* footer */
+
+footer{
+  color: var(--dark-moderate-cyan);
+  background-color: var(--light-moderate-cyan);
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-footer{
+  padding: 2rem;
+  filter: invert(50%) sepia(16%) saturate(1102%) hue-rotate(116deg) brightness(84%) contrast(97%);
+}
+
+.footer-links{
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-links a{
+  color: var(--dark-moderate-cyan);
+  padding: 1rem;
+}
+
+.icons{
+  display: flex;
+  padding: 4rem;
+}
+
+.icons img{
+  margin: 0.5rem;
+}
+
+
+/* github link */
+.github-link{
+  text-decoration: none;
+  color: var(--red);
+}
+
+
+.github-link a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+
+
+/* media */
+
+@media only screen and (min-width: 800px) {
+  .nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    position: relative;
+    top:0;
+    background-color: var(--blue);
+  }
+
+
+  .logo-nav{
+    height: 2.4rem;
+  }
+  
+  .nav-links li{
+    list-style: none;
+    color: var(--white);
+  }
+  
+  .nav-links a{
+    text-decoration: none;
+    color: var(--white);
+  }
+  
+  .contact{
+    background-color: var(--white);
+  }
+
+  .hamburger{
+    display: none;
+  }
+ 
+  .about-container{
+    display: flex;
+    text-align: left;
+    align-items: center;
+  }
+  
+
+  #transform{
+    flex-direction: row-reverse;
+  }
+
+  .about-container img{
+    width: 50vw;
+    margin: 0;
+  }
+
+  .about-text{
+    width: 50vw;
+    padding: 4rem;
+    margin: 0;
+  }
+
+  #services, .clients{
+    display: flex;
+  }
+  
+  #services{
+    display: flex;
+  }
+
+  .services-container img{
+    width: 50vw;
+  }
+
+  .clients{
+    padding: 3rem;
+  }
+
+  #projects picture{
+    width: 25%;
+  }
+}
